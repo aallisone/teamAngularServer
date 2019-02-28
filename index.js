@@ -1,4 +1,5 @@
 const express = require('express');
+const PORT = process.env.PORT || 5000;
 const MongoClient = require('mongodb').MongoClient
 const bodyParser= require('body-parser')
 var ObjectID = require('mongodb').ObjectID;
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 MongoClient.connect('mongodb+srv://user1:Password@cluster0-rahtc.mongodb.net/my-database?retryWrites=true', (err, db) => {
   if (err) return console.log(err)
 
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
     console.log('This is where the magic happens')
   });
 
