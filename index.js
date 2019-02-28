@@ -1,5 +1,5 @@
 const express = require('express');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient
 const bodyParser= require('body-parser')
 var ObjectID = require('mongodb').ObjectID;
