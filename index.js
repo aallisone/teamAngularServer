@@ -9,6 +9,9 @@ const cors = require('cors')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 MongoClient.connect('mongodb+srv://user1:Password@cluster0-rahtc.mongodb.net/my-database?retryWrites=true', (err, db) => {
   if (err) return console.log(err)
 
